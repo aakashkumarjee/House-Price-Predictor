@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Predictor</title>
+    <link rel = "stylesheet" href ="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" 
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    <script src = "app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+		  <h1 class="banner">House Price Predictor</h1>
+		  <p class="lead">This is a simple price Predictor web app which can be used to predict price based on the following attributes.</p>
+		  <hr class="my-4">
+		</div>
+        <form class="form">
+		  <div class="form-group">
+		    <label for="uisqft">Area(Square Feet)</label>
+		    <input type="number" class="form-control" id="uisqft" placeholder="area in square feet">
+		  </div>
+		  <div class="form-group">
+		    <label for="uibhk">BHK</label>
+		    <select class="form-control" id="uibhk">
+		      <option>1</option>
+		      <option>2</option>
+		      <option>3</option>
+		      <option>4</option>
+		      <option>5</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="uibath">Bathroom Count</label>
+		    <select class="form-control" id="uibath">
+		      <option>1</option>
+		      <option>2</option>
+		      <option>3</option>
+		      <option>4</option>
+		      <option>5</option>
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="uilocations">Location</label>
+		    <select class="form-control" id="uilocations">
+		    </select>
+		  </div>
+		  <div>
+		  	<button class="submit" onclick="onClickEstimatePrice()" type="button">Estimate Price</button>
+		  </div>
+		  <div id="estimated-price" class="result">
+		</form>
+    </div>
+</body>
+</html>
